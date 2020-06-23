@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InputFormChermyanin</string>
+    <string name="btn_ok">ОК</string>
+    <string name="btn_clear">Очистить</string>
+    <string name="name_user">Имя пользователя</string>
+    <string name="e_mail">Электронная почта</string>
+</resources>
