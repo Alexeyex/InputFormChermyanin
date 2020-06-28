@@ -9,11 +9,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    TextView subscription;
+    EditText name;
+    EditText email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        subscription = findViewById(R.id.subscription);
+        name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
         init();
     }
 
@@ -21,17 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Button btnOk = findViewById(R.id.btnOk);
         Button btnClear = findViewById(R.id.btnClear);
 
-        TextView nameUser = findViewById(R.id.nameUser);
-        TextView emailUser = findViewById(R.id.emailUser);
-
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
-                TextView subscription = findViewById(R.id.subscription);
-                EditText name = findViewById(R.id.name);
-                EditText email = findViewById(R.id.email);
                 subscription.setText("Подписка на рассылку успешно оформлена для пользователя "
                         + name.getText() +
                         " на электронный адрес " + email.getText());
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView subscription = findViewById(R.id.subscription);
+                subscription = findViewById(R.id.subscription);
                 subscription.setText("");
             }
         });
